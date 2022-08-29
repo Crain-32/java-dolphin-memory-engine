@@ -15,9 +15,8 @@ Source/*.VC.db
 Source/.vs/
 Source/.vscode/
 /Source/out
-
-*.pyc
-
+*.iml
+/.idea
 /.eggs
 /build
 /venv
