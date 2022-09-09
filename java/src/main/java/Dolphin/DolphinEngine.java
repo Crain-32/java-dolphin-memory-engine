@@ -122,8 +122,9 @@ public class DolphinEngine {
             return 0;
         }
         long result = 0L;
-        for (byte bite : buffer) {
-            result = result | bite << 8;
+        for (int index = 0; index < buffer.length; index++) {
+            result = result << (8 * index);
+            result |= buffer[index] ;
         }
         return switch (size) {
             case 1 -> (byte) result;
