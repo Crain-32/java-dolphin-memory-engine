@@ -1,4 +1,4 @@
-# Python Dolphin Memory Engine
+# Java Dolphin Memory Engine
 
 A Java Plugin designed to read and write the emulated memory of [the Dolphin emulator](https://github.com/dolphin-emu/dolphin) during runtime. 
 
