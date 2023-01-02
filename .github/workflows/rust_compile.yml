@@ -6,6 +6,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -15,10 +17,12 @@ jobs:
           name: windows_engine
           path: ./dolphin-memory-rs/target/release/dolphin-engine.dll
 
-  compile-linux-dll:
+  compile-linux-so:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
