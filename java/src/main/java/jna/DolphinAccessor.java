@@ -1,6 +1,6 @@
 package jna;
 
-import com.sun.jna.platform.win32.BaseTSD;
+import com.sun.jna.NativeLong;
 import com.sun.jna.win32.StdCallLibrary;
 
 public interface DolphinAccessor extends StdCallLibrary {
@@ -9,13 +9,11 @@ public interface DolphinAccessor extends StdCallLibrary {
 
     void hook();
 
-    void unhook();
+    Boolean getStatus();
 
-    Integer getStatus();
+    Long getMemOne();
 
-    Integer getPID();
+    void readFromRAM(NativeLong consoleAddress, NativeLong size, byte[] buffer);
 
-    Boolean readFromRAM(int consoleAddress, byte[] buffer, BaseTSD.SIZE_T size, boolean withBSwap);
-
-    Boolean writeToRAM(int consoleAddress, byte[] buffer, BaseTSD.SIZE_T size, boolean withDSwap);
+    Boolean writeToRAM(NativeLong consoleAddress, NativeLong size, byte[] buffer);
 }

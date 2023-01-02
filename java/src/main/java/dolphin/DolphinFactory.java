@@ -1,4 +1,4 @@
-package Dolphin;
+package dolphin;
 
 import jna.LibNameUtil;
 import org.apache.commons.io.IOUtils;

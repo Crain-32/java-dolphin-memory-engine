@@ -6,7 +6,7 @@ public class LibNameUtil {
 
     public static String getTargetLib() {
         if (SystemUtils.IS_OS_WINDOWS) {
-            return "windows_engine";
+            return "window_engine";
         } else if (SystemUtils.IS_OS_LINUX) {
             return "linux_engine";
         } else if (SystemUtils.IS_OS_MAC) {
