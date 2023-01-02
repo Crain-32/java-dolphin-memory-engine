@@ -14,7 +14,7 @@ jobs:
       - run: cargo build --release --all-features --manifest-path ./dolphin-memory-rs/Cargo.toml
       - name: Check Files
         run: |
-          find src
+          ls -R
         
       - uses: actions/upload-artifact@v3
         with:
@@ -34,7 +34,7 @@ jobs:
       - run: cargo build --release --all-features --manifest-path ./dolphin-memory-rs/Cargo.toml
       - name: Check Files
         run: |
-          find src
+          ls -R
       - uses: actions/upload-artifact@v3
         with:
           name: linux_engine
