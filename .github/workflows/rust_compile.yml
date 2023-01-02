@@ -1,6 +1,6 @@
 
 name: compile-rust-libraries
-on: workflow_call
+on: [workflow_call, workflow_dispatch]
 jobs:
   compile-windows-dll:
     runs-on: windows-latest
