@@ -15,7 +15,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: windows_engine
-          path: ./dolphin-memory-rs/target/release/dolphin-engine.dll
+          path: ./dolphin-memory-rs/target/release/dolphin_engine.dll
 
   compile-linux-so:
     runs-on: ubuntu-latest
@@ -29,5 +29,5 @@ jobs:
       - run: cargo build --release --all-features --manifest-path ./dolphin-memory-rs/Cargo.toml
       - uses: actions/upload-artifact@v3
         with:
-          name: windows_engine
-          path: ./dolphin-memory-rs/target/release/dolphin-engine.dll
+          name: linux_engine
+          path: ./dolphin-memory-rs/target/release/dolphin_engine.so
