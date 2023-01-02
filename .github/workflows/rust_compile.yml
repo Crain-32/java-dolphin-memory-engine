@@ -19,7 +19,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: windows_engine
-          path: ./dolphin-memory-rs/target/release/dolphin_engine.dll
+          path: ./dolphin-memory-rs/target/release/dolphin_memory.dll
 
 
   compile-linux-so:
@@ -38,4 +38,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: linux_engine
-          path: ./dolphin-memory-rs/target/release/dolphin_engine.so
+          path: ./dolphin-memory-rs/target/release/libdolphin_memory.so
