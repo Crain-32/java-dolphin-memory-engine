@@ -9,11 +9,11 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cargo build --release --all-features
+      - run: cargo build --release --all-features --manifest-path ./dolphin-memory-rs/Cargo.toml
       - uses: actions/upload-artifact@v3
         with:
           name: windows_engine
-          path: /target/release/dolphin-engine.dll
+          path: ./dolphin-memory-rs/target/release/dolphin-engine.dll
 
   compile-linux-dll:
     runs-on: ubuntu-latest
@@ -22,8 +22,8 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cargo build --release --all-features
+      - run: cargo build --release --all-features --manifest-path ./dolphin-memory-rs/Cargo.toml
       - uses: actions/upload-artifact@v3
         with:
           name: windows_engine
-          path: /target/release/dolphin-engine.dll
+          path: ./dolphin-memory-rs/target/release/dolphin-engine.dll
