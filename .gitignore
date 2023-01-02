@@ -25,3 +25,4 @@ Source/.vscode/
 /_dolphin_memory_engine.cpp
 /dolphin_memory_engine.egg-info
 /*.pyd
+java/target/*
