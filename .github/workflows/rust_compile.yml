@@ -39,3 +39,22 @@ jobs:
         with:
           name: linux_engine
           path: ./dolphin-memory-rs/target/release/libdolphin_memory.so
+
+  compile-mac-dylib:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - run: cargo build --release --all-features --manifest-path ./dolphin-memory-rs/Cargo.toml
+      - name: Check Files
+        run: |
+          ls -R
+        
+      - uses: actions/upload-artifact@v3
+        with:
+          name: windows_engine
+          path: ./dolphin-memory-rs/target/release/libdolphin_memory.dylib
