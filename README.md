@@ -2,7 +2,7 @@
 
 A Java Plugin designed to read and write the emulated memory of [the Dolphin emulator](https://github.com/dolphin-emu/dolphin) during runtime. 
 
-Based on the Popular [py-dolphin-engine](https://github.com/henriquegemignani/py-dolphin-memory-engine) by henriquegemignani
+Based on the Popular [py-org.crain.dolphin-engine](https://github.com/henriquegemignani/py-dolphin-memory-engine) by henriquegemignani
 
 ## Module Requirements
 
