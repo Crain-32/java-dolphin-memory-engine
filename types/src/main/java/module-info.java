@@ -1,0 +1,3 @@
+module types {
+    requires core;
+}

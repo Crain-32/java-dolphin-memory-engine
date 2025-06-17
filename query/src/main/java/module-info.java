@@ -1,0 +1,3 @@
+module query {
+    requires core;
+}

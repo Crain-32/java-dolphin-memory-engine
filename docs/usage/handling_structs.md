@@ -1,6 +1,6 @@
 # Handling Structs
 
-In the [basic example](./basic_example.md) we read from a simple pointer. However, this library's real power comes from
+In the [basic example](./basic_example.md) we read from a simple classRefPointer. However, this library's real power comes from
 being able to define and provide [Structs](../design/structs.md) to read from.
 
 ## Quick note on Structs

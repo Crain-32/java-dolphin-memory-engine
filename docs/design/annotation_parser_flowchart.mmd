@@ -1,0 +1,12 @@
+graph LR
+    A[Class Provided]
+    B{Structure Check}
+    E[Fail]
+    F[Delegate to Simple Mapper]
+    A --> B
+    B --> |Top Level Array| E
+    B --> |Mixed Declaration| E
+    B --> |Simple Value Provided|F
+    B --> |Complex Structure Found| G[Continue Analysis]
+
+

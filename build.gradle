@@ -1,0 +1,35 @@
+allprojects {
+
+    apply plugin : 'java'
+    group = 'org.crain.dme4j'
+
+    repositories {
+        mavenCentral()
+    }
+    java {
+        version = '23'
+    }
+
+    dependencies {
+        testImplementation(platform('org.junit:junit-bom:5.11.3'))
+        testImplementation('org.junit.jupiter:junit-jupiter')
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.compilerArgs += ['--enable-preview']
+    }
+
+    tasks.withType(Test).configureEach {
+        jvmArgs += '--enable-preview'
+    }
+
+    tasks.withType(JavaExec).configureEach {
+        jvmArgs += '--enable-preview'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+description = 'parent'
